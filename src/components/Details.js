@@ -10,7 +10,7 @@ function Details({ accessToken }) {
   const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {
-    fetch('https://banksystem-26.onrender.com/user_details', {
+    fetch('https://banksystem-123.onrender.com/user_details', {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },

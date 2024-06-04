@@ -7,7 +7,7 @@ function Transactions({ accessToken }) {
 
   useEffect(() => {
     const fetchTransactionDetails = () => {
-      fetch('https://banksystem-26.onrender.com/transaction_details', {
+      fetch('https://banksystem-123.onrender.com/transaction_details', {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -29,7 +29,7 @@ function Transactions({ accessToken }) {
   }, [accessToken]);
 
   const handleDelete = (transactionId) => {
-    fetch(`https://banksystem-26.onrender.com/transaction/${transactionId}`, {
+    fetch(`https://banksystem-123.onrender.com/transaction/${transactionId}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${accessToken}`,

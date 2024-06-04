@@ -11,7 +11,7 @@ function Signup({ onLogin, onSignUp }) {
 
   function handleSignupSubmit(e) {
     e.preventDefault();
-    fetch('https://banksystem-26.onrender.com/signup', {
+    fetch('https://banksystem-123.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
