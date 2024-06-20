@@ -32,7 +32,7 @@ const Transactions = ({ accessToken }) => {
     };
 
     fetchTransactions();
-  }, [accessToken]);
+  }, [accessToken, baseUrl]);
 
   const handleDelete = async (transactionId) => {
     try {

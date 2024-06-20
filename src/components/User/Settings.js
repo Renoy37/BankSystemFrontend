@@ -48,7 +48,7 @@ const Settings = ({ accessToken }) => {
     };
 
     fetchUserDetails();
-  }, [accessToken]);
+  }, [accessToken, baseUrl]);
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
