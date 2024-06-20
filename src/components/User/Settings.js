@@ -86,7 +86,7 @@ const Settings = ({ accessToken }) => {
   };
 
   if (loading) {
-    return <div><Loading /></div>;
+    return <div><Loading image={selectedImage}/></div>;
   }
 
   if (error) {

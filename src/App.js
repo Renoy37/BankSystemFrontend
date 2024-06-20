@@ -57,7 +57,7 @@ function App() {
         </Route>
 
         <Route element={<AdminLayout />}>
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard authentication={isAuthenticated} />} />
           <Route path="/admin/users" element={<AdminUsers />} />
           <Route path="/admin/transactions" element={<AdminTransactions />} />
           <Route path="/admin/settings" element={<AdminSettings />} />

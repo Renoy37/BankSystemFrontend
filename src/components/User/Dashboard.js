@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Line, Pie, Bar } from 'react-chartjs-2';
 import axios from 'axios';
-import Logout from './Logout.js'
 import Loading from '../Loading.js';
 import Card from './DashCards.js'
 import { FaArrowUp, FaChartLine } from 'react-icons/fa';
@@ -27,11 +26,11 @@ const Dashboard = ({ accessToken, setAccessToken }) => {
     fetchData();
   }, [accessToken]);
 
-  const handleLogout = () => {
-    // Clear user session or token (accessToken in this case)
-    setAccessToken(null); // Clear accessToken state
-    localStorage.removeItem('accessToken'); // Clear accessToken from localStorage
-  };
+  // const handleLogout = () => {
+  //   // Clear user session or token (accessToken in this case)
+  //   setAccessToken(null); // Clear accessToken state
+  //   localStorage.removeItem('accessToken'); // Clear accessToken from localStorage
+  // };
 
 
   if (!dashboardData) return <div className="flex justify-center items-center h-screen"><Loading /></div>;
