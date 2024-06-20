@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
+const GetTransactionsUrl = 'https://banksystem-123.onrender.com/transaction_details'
+const deleteTransactionsUrl = 'https://banksystem-123.onrender.com/transaction/${transactionId}'
+const loaclGetTransactions = 'http://127.0.0.1:5000/transaction_details'
+const delLoaclTransactions = 'http://127.0.0.1:5000/${transactionId}'
+
+
 function Transactions({ accessToken }) {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
     const fetchTransactionDetails = () => {
-      fetch('https://banksystem-123.onrender.com/transaction_details', {
+      fetch(loaclGetTransactions, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -29,7 +35,7 @@ function Transactions({ accessToken }) {
   }, [accessToken]);
 
   const handleDelete = (transactionId) => {
-    fetch(`https://banksystem-123.onrender.com/transaction/${transactionId}`, {
+    fetch(delLoaclTransactions, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${accessToken}`,

@@ -137,7 +137,7 @@ body {
 
 .transactions-container {
   margin: 20px;
-  height: 70vh;
+  height: auto;
 }
 
 .transaction-list {

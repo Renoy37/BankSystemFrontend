@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import './form.css';
 
 
+const SIGNUP_URL = 'https://banksystem-123.onrender.com/signup';
+const LOGIN_URL = 'https://banksystem-123.onrender.com/login';
+const localSignUp = 'http://127.0.0.1:5000/signup'
+const locLogin = 'http://127.0.0.1:5000/login'
+
+
 function Signup({ onLogin, onSignUp }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,7 +17,7 @@ function Signup({ onLogin, onSignUp }) {
 
   function handleSignupSubmit(e) {
     e.preventDefault();
-    fetch('https://banksystem-123.onrender.com/signup', {
+    fetch(localSignUp, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,7 +44,7 @@ function Signup({ onLogin, onSignUp }) {
 
   function handleLoginSubmit(e) {
     e.preventDefault();
-    fetch('https://banksystem-26.onrender.com/login', {
+    fetch(locLogin, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -90,13 +96,17 @@ function Signup({ onLogin, onSignUp }) {
           <span>
             {isSigningUp ? (
               <>
+                <div>
                 Already have an account?{' '}
                 <button type="button" onClick={() => setIsSigningUp(false)}>Login</button>
+                </div>
               </>
             ) : (
               <>
+                <div>
                 Don't have an account?{' '}
                 <button type="button" onClick={() => setIsSigningUp(true)}>Signup</button>
+                </div>
               </>
             )}
           </span>
