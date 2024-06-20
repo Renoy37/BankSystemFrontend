@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 
-const AdminSidebar = () => {
+function AdminSidebar ()  {
   const location = useLocation();
   const activeTab = location.pathname.substring(7) || 'dashboard';
 
