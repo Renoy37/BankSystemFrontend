@@ -6,10 +6,15 @@ const Transactions = ({ accessToken }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // const production = 'http://127.0.0.1:5000';
+  const deployment = 'https://banksystem-123.onrender.com';
+  const baseUrl = deployment
+
+
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/transactions', {
+        const response = await fetch(`${baseUrl}/api/transactions`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -31,7 +36,7 @@ const Transactions = ({ accessToken }) => {
 
   const handleDelete = async (transactionId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/transactions/del/${transactionId}`, {
+      const response = await fetch(`${baseUrl}/api/transactions/del/${transactionId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${accessToken}`,

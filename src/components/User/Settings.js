@@ -16,10 +16,14 @@ const Settings = ({ accessToken }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // const production = 'http://127.0.0.1:5000';
+  const deployment = 'https://banksystem-123.onrender.com';
+  const baseUrl = deployment
+
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/user/details', {
+        const response = await fetch(`${baseUrl}/api/user/details`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -68,7 +72,7 @@ const Settings = ({ accessToken }) => {
 
   const handleSave = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/user/update', {
+      const response = await fetch(`${baseUrl}/api/user/update`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -79,7 +83,7 @@ const Settings = ({ accessToken }) => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      setIsEditing(false); // Exit edit mode if successful
+      setIsEditing(false); 
     } catch (error) {
       console.error('Error saving user details:', error);
     }

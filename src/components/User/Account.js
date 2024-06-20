@@ -7,10 +7,13 @@ const Accounts = ({ accessToken }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  // const production = 'http://127.0.0.1:5000/api/accounts';
+  const deployment = 'https://banksystem-123.onrender.com/api/accounts'
+
   useEffect(() => {
     const fetchAccounts = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/api/accounts', {
+        const response = await axios.get(deployment, {
           headers: {
             Authorization: `Bearer ${accessToken}`
           }

@@ -14,13 +14,17 @@ const DSignUpForm = () => {
     window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID&redirect_uri=http://127.0.0.1:5000/auth/github/callback&scope=user';
   };
 
+  // const production = 'http://127.0.0.1:5000';
+  const deployment = 'https://banksystem-123.onrender.com';
+  const baseUrl = deployment
+
   const handleEmailSignUp = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/signup', {
+      const response = await fetch(`${baseUrl}/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +52,7 @@ const DSignUpForm = () => {
     const password = event.target.password.value;
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/login', {
+      const response = await fetch(`${baseUrl}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

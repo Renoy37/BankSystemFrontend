@@ -9,10 +9,13 @@ import { FaArrowUp, FaChartLine } from 'react-icons/fa';
 const Dashboard = ({ accessToken, setAccessToken }) => {
   const [dashboardData, setDashboardData] = useState(null);
 
+  // const production = 'http://127.0.0.1:5000/dashboard_data';
+  const deployment = 'https://banksystem-123.onrender.com/dashboard_data'
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/dashboard_data', {
+        const response = await axios.get(deployment, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
