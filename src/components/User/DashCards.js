@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaArrowUp, FaChartLine } from 'react-icons/fa';
 
 const Card = ({ amount, label, percentage, icon, trend, className }) => {
   return (

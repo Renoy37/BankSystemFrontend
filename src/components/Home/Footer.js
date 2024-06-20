@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import githubIcon from '@iconify-icons/fa-brands/github';
 import linkedinIcon from '@iconify-icons/fa-brands/linkedin';
 import userIcon from '@iconify-icons/fa-solid/user';

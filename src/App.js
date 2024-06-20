@@ -1,9 +1,6 @@
 import './App.css';
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; 
-import Menu from './components/Menu';
-import Details from './components/Details.js';
-import SignInSide from './components/Login/Signup.js';
 import DSignUpForm from './components/Login/DSignUpForm';
 import HomePage from './components/Home/HomePage.js'
 import Dashboard from './components/User/Dashboard.js';
@@ -47,8 +44,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<DSignUpForm onSignUp={handleSignUp} onLogin={handleLogin} accessToken={accessToken} />} />
-        <Route path="/menu" element={isAuthenticated ? <Menu /> : <Navigate to="/signup" />} />
-        <Route path="/details" element={isAuthenticated ? <Details accessToken={accessToken} /> : <Navigate to="/signup" />} />
         
         <Route element={<Layout accessToken={accessToken}  />}>
           <Route path="/dashboard" element={<Dashboard accessToken={accessToken} setAccessToken={setAccessToken} />} />
