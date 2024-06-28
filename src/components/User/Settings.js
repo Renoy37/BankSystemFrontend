@@ -129,14 +129,26 @@ const Settings = ({ accessToken }) => {
               <span className="font-semibold">My Profile</span>
             </li>
             <li className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition">
-              <span className="font-semibold">Edit Profile</span>
+              <span className="font-semibold" onClick={toggleEditMode}>{isEditing ? (
+            <button
+              onClick={handleSave}
+            >
+              Save
+            </button>
+          ) : (
+            <button
+              onClick={toggleEditMode}
+            >
+              Edit Profile
+            </button>
+          )}</span>
             </li>
-            <li className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition">
+            {/* <li className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition">
               <span className="font-semibold">Reset Password</span>
-            </li>
-            <li className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition">
+            </li> */}
+            {/* <li className="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition">
               <span className="font-semibold">Logout</span>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

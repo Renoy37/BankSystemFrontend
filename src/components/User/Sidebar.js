@@ -14,7 +14,7 @@ const Sidebar = ({ onLogout }) => {
         <span className="text-2xl font-bold">CoinSage</span>
       </div>
       <nav className="flex flex-col space-y-4">
-        {['dashboard', 'account', 'transactions', 'settings', 'support'].map((tab) => (
+        {['dashboard', 'account', 'transactions', 'settings'].map((tab) => (
           <Link
             key={tab}
             to={`/${tab}`}
