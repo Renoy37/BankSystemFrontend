@@ -18,6 +18,7 @@ import AdminSupport from './components/Admin/AdminSupport.js';
 import AdminComplaits from './components/Admin/AdminComplaits.js';
 import Notifications from './components/User/Notifications.js';
 import Logout from './components/User/Logout.js';
+import UserNavbar from '../src/components/User/UserNavbar.js'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -50,7 +51,8 @@ function App() {
           <Route path="/account" element={<Account accessToken={accessToken}  />} />
           <Route path="/transactions" element={<Transactions accessToken={accessToken} />} />
           <Route path="/notifications" element={<Notifications />}></Route>
-          <Route path="/settings" element={<Settings  accessToken={accessToken} />} />  
+          <Route path="/settings" element={<Settings  accessToken={accessToken} />} />
+          <Route path="/usernav" element={<UserNavbar accessToken={accessToken} setAccessToken={setAccessToken} />} />  
           <Route path="/support" element={<Support />} />
           <Route path="/logout" element={<Logout  />} />
           <Route path="*" element={<Navigate to="/dashboard" />} />

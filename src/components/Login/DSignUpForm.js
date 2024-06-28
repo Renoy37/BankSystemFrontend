@@ -94,7 +94,17 @@ const DSignUpForm = () => {
         <div className="mb-6 text-center">
           <h1 className="text-2xl font-semibold text-gray-800">{isSigningUp ? 'Sign up' : 'Log in'}</h1>
         </div>
-        <div className="mb-4">
+        <h3 className="w-full flex items-center justify-center px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Login Demo 1: john10@gmail.com 
+          password : password10
+        </h3>
+        <h3 className="w-full flex items-center justify-center px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-4"
+        >
+          Login Demo 2: john20@gmail.com 
+          password : password20
+        </h3>
+        {/* <div className="mb-4">
           <button
             onClick={handleGoogleSignUp}
             className="w-full flex items-center justify-center px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -118,7 +128,7 @@ const DSignUpForm = () => {
             </svg>
             {isSigningUp ? 'Sign Up' : 'Log In'} with GitHub
           </button>
-        </div>
+        </div> */}
         <div className="mb-4 text-center">
           <span className="text-gray-600">Or {isSigningUp ? 'sign up' : 'log in'} with e-mail</span>
         </div>

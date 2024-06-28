@@ -8,7 +8,7 @@ const Sidebar = ({ onLogout }) => {
   const activeTab = location.pathname.substring(1) || 'dashboard';
 
   return (
-    <div className="bg-blue-700 text-white w-64 p-4 flex flex-col h-full fixed lg:relative z-50">
+    <div className="bg-blue-700 text-white w-64 p-4 flex flex-col h-full fixed lg:relative z-50 ">
       <div className="flex items-center mb-8">
         <img src={Logo} alt="CoinSage" className="h-10 w-10 mr-2" />
         <span className="text-2xl font-bold">CoinSage</span>
