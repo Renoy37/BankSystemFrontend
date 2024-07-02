@@ -6,13 +6,13 @@ const DSignUpForm = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleGoogleSignUp = () => {
-    window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=http://127.0.0.1:5000/auth/google/callback&response_type=code&scope=email%20profile';
-  };
+  // const handleGoogleSignUp = () => {
+  //   window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=http://127.0.0.1:5000/auth/google/callback&response_type=code&scope=email%20profile';
+  // };
 
-  const handleGitHubSignUp = () => {
-    window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID&redirect_uri=http://127.0.0.1:5000/auth/github/callback&scope=user';
-  };
+  // const handleGitHubSignUp = () => {
+  //   window.location.href = 'https://github.com/login/oauth/authorize?client_id=YOUR_GITHUB_CLIENT_ID&redirect_uri=http://127.0.0.1:5000/auth/github/callback&scope=user';
+  // };
 
   // const production = 'http://127.0.0.1:5000';
   const deployment = 'https://banksystem-123.onrender.com';

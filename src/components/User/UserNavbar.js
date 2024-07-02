@@ -44,7 +44,7 @@ const UserNavbar = ({ userAvatar, onLogout, accessToken }) => {
     };
 
     fetchUserDetails();
-  }, [accessToken, baseUrl]);
+  }, [accessToken]);
 
   const navigate = useNavigate();
 
